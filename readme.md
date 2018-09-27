@@ -1,6 +1,6 @@
 # mmCMS Demo API
 
-The mmCMS Demo API is an implementation of a JSON RESTful API against the mmCMS package.
+The mmCMS Demo API is an implementation of a JSON RESTful API against the [mmCMS](https://github.com/thtg88/mmcms) package.
 
 ## Security Vulnerabilities
 
