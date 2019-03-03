@@ -16,10 +16,7 @@ class User extends \Thtg88\MmCms\Models\User
      * @var array
      */
     protected $fillable = [
-        'created_at',
-        'name',
-        'email',
-        'password',
+        'name', 'email', 'password',
     ];
 
     /**
@@ -29,5 +26,14 @@ class User extends \Thtg88\MmCms\Models\User
      */
     protected $hidden = [
         'password', 'remember_token',
+    ];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'email_verified_at' => 'datetime',
     ];
 }
