@@ -65,6 +65,9 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
-        ]
+        ],
+        "check-style": "vendor/bin/php-cs-fixer fix --using-cache=no --diff --dry-run",
+        "fix-style": "vendor/bin/php-cs-fixer fix --using-cache=no",
+        "test": "vendor/bin/phpunit"
     }
 }
