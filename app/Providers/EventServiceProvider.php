@@ -2,15 +2,13 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\Facades\Event;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-// Fields
+use Illuminate\Support\Facades\Event;
 use Thtg88\MmCms\Events\ContentFieldDestroyed;
 use Thtg88\MmCms\Events\ContentFieldStored;
 use Thtg88\MmCms\Events\ContentModelStored;
-// Listeners
 use Thtg88\MmCms\Listeners\MakeContentFieldDropColumnMigration;
 use Thtg88\MmCms\Listeners\MakeContentFieldMigration;
 use Thtg88\MmCms\Listeners\MakeContentModelMigration;

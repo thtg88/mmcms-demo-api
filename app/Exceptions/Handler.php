@@ -2,8 +2,8 @@
 
 namespace App\Exceptions;
 
-use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Throwable;
 
 class Handler extends ExceptionHandler
 {
@@ -29,10 +29,12 @@ class Handler extends ExceptionHandler
     /**
      * Report or log an exception.
      *
-     * @param  \Exception  $exception
+     * @param  \Throwable  $exception
      * @return void
+     *
+     * @throws \Exception
      */
-    public function report(Exception $exception)
+    public function report(Throwable $exception)
     {
         parent::report($exception);
     }
@@ -41,32 +43,49 @@ class Handler extends ExceptionHandler
      * Render an exception into an HTTP response.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \Exception  $exception
-     * @return \Illuminate\Http\Response
+     * @param  \Throwable  $exception
+     * @return \Symfony\Component\HttpFoundation\Response
+     *
+     * @throws \Throwable
      */
-    public function render($request, Exception $exception)
+    public function render($request, Throwable $exception)
     {
         if ($exception instanceof \Symfony\Component\HttpKernel\Exception\NotFoundHttpException) {
             $msg = $exception->getMessage() ?: "Resource not found.";
+
             return response()->json(["errors" => ["resource_not_found" => [$msg]]], 404);
-        } elseif ($exception instanceof \Illuminate\Auth\Access\AuthorizationException) {
+        }
+
+        if ($exception instanceof \Illuminate\Auth\Access\AuthorizationException) {
             $msg = $exception->getMessage() ?: "Forbidden.";
+
             return response()->json(["errors" => ["forbidden" => [$msg]]], 403);
-        } elseif ($exception instanceof \Illuminate\Auth\AuthenticationException) {
+        }
+
+        if ($exception instanceof \Illuminate\Auth\AuthenticationException) {
             $msg = $exception->getMessage() ?: "Unauthenticated.";
+
             return response()->json(["errors" => ["unauthenticated" => [$msg]]], 403);
-        } elseif ($exception instanceof \Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException) {
+        }
+
+        if ($exception instanceof \Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException) {
             return response()->json(["errors" => ["method_not_allowed" => ["Method not allowed."]]], 405);
-        } elseif ($exception instanceof \Symfony\Component\HttpKernel\Exception\HttpException) {
+        }
+
+        if ($exception instanceof \Symfony\Component\HttpKernel\Exception\HttpException) {
             if ($exception->getStatusCode() == 403) {
                 $msg = $exception->getMessage() ?: "Forbidden.";
+
                 return response()->json(["errors" => ["forbidden" => [$msg]]], 403);
             }
+
             if ($exception->getStatusCode() == 401) {
                 $msg = $exception->getMessage() ?: "Unauthorized.";
+
                 return response()->json(["errors" => ["unauthorized" => [$msg]]], 403);
             }
         }
+
         return parent::render($request, $exception);
     }
 }
