@@ -3,9 +3,10 @@
     "type": "project",
     "description": "mmCMS Demo API",
     "keywords": [
+        "cms",
         "laravel",
         "laravel-framework",
-        "laravel57",
+        "laravel6",
         "rest-api",
         "json-api",
         "php"
