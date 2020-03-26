@@ -51,38 +51,53 @@ class Handler extends ExceptionHandler
     public function render($request, Throwable $exception)
     {
         if ($exception instanceof \Symfony\Component\HttpKernel\Exception\NotFoundHttpException) {
-            $msg = $exception->getMessage() ?: "Resource not found.";
+            $msg = $exception->getMessage() ?: 'Resource not found.';
 
-            return response()->json(["errors" => ["resource_not_found" => [$msg]]], 404);
+            return response()->json(
+                ['errors' => ['resource_not_found' => [$msg]]],
+                404
+            );
         }
 
         if ($exception instanceof \Illuminate\Auth\Access\AuthorizationException) {
-            $msg = $exception->getMessage() ?: "Forbidden.";
+            $msg = $exception->getMessage() ?: 'Forbidden.';
 
-            return response()->json(["errors" => ["forbidden" => [$msg]]], 403);
+            return response()->json(['errors' => ['forbidden' => [$msg]]], 403);
         }
 
         if ($exception instanceof \Illuminate\Auth\AuthenticationException) {
-            $msg = $exception->getMessage() ?: "Unauthenticated.";
+            $msg = $exception->getMessage() ?: 'Unauthenticated.';
 
-            return response()->json(["errors" => ["unauthenticated" => [$msg]]], 403);
+            return response()->json(
+                ['errors' => ['unauthenticated' => [$msg]]],
+                403
+            );
         }
 
         if ($exception instanceof \Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException) {
-            return response()->json(["errors" => ["method_not_allowed" => ["Method not allowed."]]], 405);
+            return response()->json(
+                ['errors' => ['method_not_allowed' => ['Method not allowed.']]],
+                405
+            );
         }
 
         if ($exception instanceof \Symfony\Component\HttpKernel\Exception\HttpException) {
-            if ($exception->getStatusCode() == 403) {
-                $msg = $exception->getMessage() ?: "Forbidden.";
+            if ($exception->getStatusCode() === 403) {
+                $msg = $exception->getMessage() ?: 'Forbidden.';
 
-                return response()->json(["errors" => ["forbidden" => [$msg]]], 403);
+                return response()->json(
+                    ['errors' => ['forbidden' => [$msg]]],
+                    403
+                );
             }
 
-            if ($exception->getStatusCode() == 401) {
-                $msg = $exception->getMessage() ?: "Unauthorized.";
+            if ($exception->getStatusCode() === 401) {
+                $msg = $exception->getMessage() ?: 'Unauthorized.';
 
-                return response()->json(["errors" => ["unauthorized" => [$msg]]], 403);
+                return response()->json(
+                    ['errors' => ['unauthorized' => [$msg]]],
+                    403
+                );
             }
         }
 
