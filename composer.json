@@ -19,7 +19,7 @@
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
-        "thtg88/mmcms": "^0.16"
+        "thtg88/mmcms": "^0.21.1"
     },
     "require-dev": {
         "brainmaestro/composer-git-hooks": "^2.8",
