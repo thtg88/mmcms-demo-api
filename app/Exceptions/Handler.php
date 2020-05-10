@@ -36,13 +36,6 @@ class Handler extends ExceptionHandler
      */
     public function report(Throwable $exception)
     {
-        if (app()->bound('sentry') && $this->shouldReport($exception)) {
-            app('log')->debug('Submitting exception to Sentry!');
-            $eventId = app('sentry')->captureException($exception);
-            app('log')->debug('Submitted exception to Sentry with id:' . $eventId);
-            app('log')->debug('Possible send error: ' . app('sentry')->_lasterror);
-        }
-
         parent::report($exception);
     }
 
