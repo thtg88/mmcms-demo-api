@@ -72,8 +72,12 @@ return [
             ],
         ],
 
+        'sentry' => [
+            'driver' => 'sentry',
+        ],
+
         'stderr' => [
-            'driver' => 'monolog',
+            'driver' => ['monolog', 'sentry'],
             'handler' => StreamHandler::class,
             'formatter' => env('LOG_STDERR_FORMATTER'),
             'with' => [
