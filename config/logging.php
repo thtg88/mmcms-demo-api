@@ -37,7 +37,10 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['daily', 'sentry', 'stderr'],
+            'channels' => env('APP_ENV') === 'local' ||
+                env('APP_ENV') === 'testing' ?
+                    ['daily'] :
+                    ['daily', 'sentry', 'stderr'],
             'ignore_exceptions' => false,
         ],
 
