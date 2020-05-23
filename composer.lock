@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3ecfbe205f5c6c17789e18d65c1e1557",
+    "content-hash": "0943c32d256423e91695d902f782d912",
     "packages": [
         {
             "name": "anhskohbo/no-captcha",
@@ -5598,16 +5598,16 @@
         },
         {
             "name": "thtg88/mmcms",
-            "version": "v0.30.0",
+            "version": "v0.30.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thtg88/mmcms.git",
-                "reference": "dd039a968fea0b8140a33e3a9df00ceb2026904a"
+                "reference": "b3189dc7f0a4c5abab68c1b1c4f26eb5ad39949f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thtg88/mmcms/zipball/dd039a968fea0b8140a33e3a9df00ceb2026904a",
-                "reference": "dd039a968fea0b8140a33e3a9df00ceb2026904a",
+                "url": "https://api.github.com/repos/thtg88/mmcms/zipball/b3189dc7f0a4c5abab68c1b1c4f26eb5ad39949f",
+                "reference": "b3189dc7f0a4c5abab68c1b1c4f26eb5ad39949f",
                 "shasum": ""
             },
             "require": {
@@ -5667,7 +5667,7 @@
                 }
             ],
             "description": "A headless CMS. With a REST API.",
-            "time": "2020-05-23T11:15:28+00:00"
+            "time": "2020-05-23T11:29:53+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
