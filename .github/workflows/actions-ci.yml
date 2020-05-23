@@ -8,7 +8,7 @@ on:
       - '*'
 
 jobs:
-  laravel-lint:
+  build:
 
     runs-on: ubuntu-latest
 
