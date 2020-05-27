@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2d65ca77ffa5c86056f9adbb66454c1d",
+    "content-hash": "127f68a1ce0a7e1e3ca71875c30b32d4",
     "packages": [
         {
             "name": "anhskohbo/no-captcha",
@@ -379,20 +379,20 @@
         },
         {
             "name": "doctrine/cache",
-            "version": "1.10.0",
+            "version": "1.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "382e7f4db9a12dc6c19431743a2b096041bcdd62"
+                "reference": "35a4a70cd94e09e2259dfae7488afc6b474ecbd3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/382e7f4db9a12dc6c19431743a2b096041bcdd62",
-                "reference": "382e7f4db9a12dc6c19431743a2b096041bcdd62",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/35a4a70cd94e09e2259dfae7488afc6b474ecbd3",
+                "reference": "35a4a70cd94e09e2259dfae7488afc6b474ecbd3",
                 "shasum": ""
             },
             "require": {
-                "php": "~7.1"
+                "php": "~7.1 || ^8.0"
             },
             "conflict": {
                 "doctrine/common": ">2.2,<2.4"
@@ -457,7 +457,21 @@
                 "redis",
                 "xcache"
             ],
-            "time": "2019-11-29T15:36:20+00:00"
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fcache",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-05-27T16:24:54+00:00"
         },
         {
             "name": "doctrine/dbal",
@@ -5682,16 +5696,16 @@
         },
         {
             "name": "thtg88/mmcms",
-            "version": "v0.34.0",
+            "version": "v0.35.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thtg88/mmcms.git",
-                "reference": "02a17962662ef04e6c920d040db737bfdaf67a18"
+                "reference": "8339832c36fa06e3590001ca5b9470eb5f7af996"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thtg88/mmcms/zipball/02a17962662ef04e6c920d040db737bfdaf67a18",
-                "reference": "02a17962662ef04e6c920d040db737bfdaf67a18",
+                "url": "https://api.github.com/repos/thtg88/mmcms/zipball/8339832c36fa06e3590001ca5b9470eb5f7af996",
+                "reference": "8339832c36fa06e3590001ca5b9470eb5f7af996",
                 "shasum": ""
             },
             "require": {
@@ -5752,7 +5766,7 @@
                 }
             ],
             "description": "A headless CMS. With a REST API.",
-            "time": "2020-05-26T20:55:41+00:00"
+            "time": "2020-05-27T20:05:27+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -6872,16 +6886,16 @@
         },
         {
             "name": "justinrainbow/json-schema",
-            "version": "5.2.9",
+            "version": "5.2.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/justinrainbow/json-schema.git",
-                "reference": "44c6787311242a979fa15c704327c20e7221a0e4"
+                "reference": "2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/44c6787311242a979fa15c704327c20e7221a0e4",
-                "reference": "44c6787311242a979fa15c704327c20e7221a0e4",
+                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b",
+                "reference": "2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b",
                 "shasum": ""
             },
             "require": {
@@ -6934,7 +6948,7 @@
                 "json",
                 "schema"
             ],
-            "time": "2019-09-25T14:49:45+00:00"
+            "time": "2020-05-27T16:41:55+00:00"
         },
         {
             "name": "mockery/mockery",
