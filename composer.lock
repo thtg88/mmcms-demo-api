@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fd9cf644fc67c30b6af573443c262632",
+    "content-hash": "21a462651f3c89133e473676f6db2051",
     "packages": [
         {
             "name": "anhskohbo/no-captcha",
@@ -6328,16 +6328,16 @@
         },
         {
             "name": "thtg88/laravel-scaffold-commands",
-            "version": "v0.1.0",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thtg88/laravel-scaffold-commands.git",
-                "reference": "3f2bfef49671674a05bcc3cc3c3114b6b2d28893"
+                "reference": "347bf54a5e97261c8fd37f62287dd83bdf5d09d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thtg88/laravel-scaffold-commands/zipball/3f2bfef49671674a05bcc3cc3c3114b6b2d28893",
-                "reference": "3f2bfef49671674a05bcc3cc3c3114b6b2d28893",
+                "url": "https://api.github.com/repos/thtg88/laravel-scaffold-commands/zipball/347bf54a5e97261c8fd37f62287dd83bdf5d09d7",
+                "reference": "347bf54a5e97261c8fd37f62287dd83bdf5d09d7",
                 "shasum": ""
             },
             "require": {
@@ -6381,20 +6381,20 @@
                 }
             ],
             "description": "Handy Laravel Scaffold Artisan Commands.",
-            "time": "2020-06-14T19:20:54+00:00"
+            "time": "2020-06-14T21:38:26+00:00"
         },
         {
             "name": "thtg88/mmcms",
-            "version": "v0.36.0",
+            "version": "v0.36.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thtg88/mmcms.git",
-                "reference": "bdb1eba8d6c37508fcf38db6ae1ae96f598db9a3"
+                "reference": "2000b1d986d8522f7a261e7b29ce4a2729a40d6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thtg88/mmcms/zipball/bdb1eba8d6c37508fcf38db6ae1ae96f598db9a3",
-                "reference": "bdb1eba8d6c37508fcf38db6ae1ae96f598db9a3",
+                "url": "https://api.github.com/repos/thtg88/mmcms/zipball/2000b1d986d8522f7a261e7b29ce4a2729a40d6a",
+                "reference": "2000b1d986d8522f7a261e7b29ce4a2729a40d6a",
                 "shasum": ""
             },
             "require": {
@@ -6416,7 +6416,7 @@
                 "laravel/passport": "^8.0",
                 "nesbot/carbon": "^2.0.0",
                 "thtg88/laravel-exists-without-soft-deleted-rule": "^0.2.0",
-                "thtg88/laravel-scaffold-commands": "^0.1.0"
+                "thtg88/laravel-scaffold-commands": "^0.2.0"
             },
             "require-dev": {
                 "brainmaestro/composer-git-hooks": "^2.8",
@@ -6455,7 +6455,7 @@
                 }
             ],
             "description": "A headless CMS. With a REST API.",
-            "time": "2020-06-14T20:54:04+00:00"
+            "time": "2020-06-14T21:48:50+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
