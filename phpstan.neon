@@ -3,10 +3,12 @@ includes:
 parameters:
     # The level 7 is the highest level
     level: 1
-    ignoreErrors:
-        - '#Access to an undefined property App\\Models\\#'
-        - '#Function factory invoked with 1 parameter, 0 required.#'
-        - '#Function factory invoked with 2 parameters, 0 required.#'
+    paths:
+        - app
+        - config
+        - resources
+        - routes
+        - tests
     # excludes_analyse:
     #     - ./*/*/FileToBeExcluded.php
     # checkMissingIterableValueType: false
