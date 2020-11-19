@@ -13,23 +13,23 @@
     ],
     "license": "MIT",
     "require": {
-        "sentry/sentry-laravel": "1.7.1",
-        "thtg88/mmcms": "^0.36.4"
         "php": "^7.4.12|^8.0",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.12",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+        "sentry/sentry-laravel": "^2.2",
+        "thtg88/mmcms": "^0.39.0"
     },
     "require-dev": {
         "brainmaestro/composer-git-hooks": "^2.8",
-        "friendsofphp/php-cs-fixer": "^2.16",
-        "nunomaduro/larastan": "^0.5.4",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
+        "friendsofphp/php-cs-fixer": "^2.16",
         "mockery/mockery": "^1.4.2",
         "nunomaduro/collision": "^5.0",
+        "nunomaduro/larastan": "^0.6.9",
         "phpunit/phpunit": "^9.3.3"
     },
     "config": {
