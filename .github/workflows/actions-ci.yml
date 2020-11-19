@@ -2,28 +2,24 @@ name: mmCMS Demo API CI
 
 on:
   push:
-  schedule:
-    - cron: '0 0 * * *'
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
+    if: "! contains(toJSON(github.event.commits.*.message), '[skip-ci]')"
 
     steps:
     - uses: actions/checkout@v2
 
-    - name: Cache composer dependencies
-      uses: actions/cache@v1
+    - name: Configure PHP
+      uses: shivammathur/setup-php@v2
       with:
-        path: ./vendor
-        key: composer-vendor-${{ hashFiles('**/composer.lock') }}
+        php-version: 7.4
+
+    - uses: "ramsey/composer-install@v1"
 
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
-
-    - name: Install Dependencies
-      run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
 
     - name: Generate key
       run: php artisan key:generate
