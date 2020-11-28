@@ -7030,16 +7030,16 @@
         },
         {
             "name": "thtg88/mmcms",
-            "version": "v0.39.1",
+            "version": "v0.39.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thtg88/mmcms.git",
-                "reference": "e89f2c948f444493b1fca9db813ab9c914549fb0"
+                "reference": "9de133a48ae4ab442d85907ab1c09046dfaa0a71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thtg88/mmcms/zipball/e89f2c948f444493b1fca9db813ab9c914549fb0",
-                "reference": "e89f2c948f444493b1fca9db813ab9c914549fb0",
+                "url": "https://api.github.com/repos/thtg88/mmcms/zipball/9de133a48ae4ab442d85907ab1c09046dfaa0a71",
+                "reference": "9de133a48ae4ab442d85907ab1c09046dfaa0a71",
                 "shasum": ""
             },
             "require": {
@@ -7103,9 +7103,9 @@
             "description": "A headless CMS. With a REST API.",
             "support": {
                 "issues": "https://github.com/thtg88/mmcms/issues",
-                "source": "https://github.com/thtg88/mmcms/tree/v0.39.1"
+                "source": "https://github.com/thtg88/mmcms/tree/v0.39.2"
             },
-            "time": "2020-11-28T19:49:49+00:00"
+            "time": "2020-11-28T20:52:30+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
