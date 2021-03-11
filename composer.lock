@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4c171d934c7b6f78c7452b60c05c5f87",
+    "content-hash": "e7b5cf584ca8d14a7b3859a7805d1b5a",
     "packages": [
         {
             "name": "anhskohbo/no-captcha",
@@ -6943,17 +6943,82 @@
             "time": "2021-03-06T07:59:01+00:00"
         },
         {
-            "name": "thtg88/laravel-exists-without-soft-deleted-rule",
-            "version": "v0.2.1",
+            "name": "thtg88/laravel-db-scaffold-commands",
+            "version": "v0.3.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/thtg88/laravel-exists-without-soft-deleted-rule.git",
-                "reference": "55a345576fc422fb8d2b077797ed9b33b44fb015"
+                "url": "https://github.com/thtg88/laravel-db-scaffold-commands.git",
+                "reference": "5628e234b5813b9dda5848b986a03d2cdc985597"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thtg88/laravel-exists-without-soft-deleted-rule/zipball/55a345576fc422fb8d2b077797ed9b33b44fb015",
-                "reference": "55a345576fc422fb8d2b077797ed9b33b44fb015",
+                "url": "https://api.github.com/repos/thtg88/laravel-db-scaffold-commands/zipball/5628e234b5813b9dda5848b986a03d2cdc985597",
+                "reference": "5628e234b5813b9dda5848b986a03d2cdc985597",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-pdo": "*",
+                "illuminate/console": "^8.29",
+                "illuminate/support": "^8.29",
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "brainmaestro/composer-git-hooks": "^2.8",
+                "fakerphp/faker": "^1.13",
+                "friendsofphp/php-cs-fixer": "^2.17",
+                "mockery/mockery": "^1.4",
+                "orchestra/testbench": "^6.7",
+                "phpunit/phpunit": "^9.5",
+                "vimeo/psalm": "^4.3"
+            },
+            "type": "library",
+            "extra": {
+                "hooks": {
+                    "pre-commit": [
+                        "vendor/bin/php-cs-fixer fix --using-cache=no --diff --dry-run"
+                    ]
+                },
+                "laravel": {
+                    "providers": [
+                        "Thtg88\\DbScaffold\\DbScaffoldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Thtg88\\DbScaffold\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Marassi",
+                    "email": "admin@marco-marassi.com"
+                }
+            ],
+            "description": "Scaffold a DB with the given Laravel Artisan commands.",
+            "support": {
+                "issues": "https://github.com/thtg88/laravel-db-scaffold-commands/issues",
+                "source": "https://github.com/thtg88/laravel-db-scaffold-commands/tree/v0.3.0"
+            },
+            "time": "2021-03-02T14:38:36+00:00"
+        },
+        {
+            "name": "thtg88/laravel-exists-without-soft-deleted-rule",
+            "version": "v0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thtg88/laravel-exists-without-soft-deleted-rule.git",
+                "reference": "243791bf9a0a230ff03863bb8117182905fd8cda"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thtg88/laravel-exists-without-soft-deleted-rule/zipball/243791bf9a0a230ff03863bb8117182905fd8cda",
+                "reference": "243791bf9a0a230ff03863bb8117182905fd8cda",
                 "shasum": ""
             },
             "require": {
@@ -6979,13 +7044,13 @@
                 },
                 "laravel": {
                     "providers": [
-                        "Thtg88\\LaravelExistsWithoutSoftDeletedRule\\LaravelExistsWithoutSoftDeletedRuleServiceProvider"
+                        "Thtg88\\ExistsWithoutSoftDeletedRule\\ExistsWithoutSoftDeletedRuleServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Thtg88\\LaravelExistsWithoutSoftDeletedRule\\": "src/"
+                    "Thtg88\\ExistsWithoutSoftDeletedRule\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -7001,9 +7066,9 @@
             "description": "Provide a Laravel `exists` validation rule that excludes soft-deleted models.",
             "support": {
                 "issues": "https://github.com/thtg88/laravel-exists-without-soft-deleted-rule/issues",
-                "source": "https://github.com/thtg88/laravel-exists-without-soft-deleted-rule/tree/v0.2.1"
+                "source": "https://github.com/thtg88/laravel-exists-without-soft-deleted-rule/tree/v0.3.0"
             },
-            "time": "2020-09-09T11:24:20+00:00"
+            "time": "2021-01-16T20:09:55+00:00"
         },
         {
             "name": "thtg88/laravel-scaffold-commands",
@@ -7068,38 +7133,28 @@
         },
         {
             "name": "thtg88/mmcms",
-            "version": "v0.39.2",
+            "version": "v0.40.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thtg88/mmcms.git",
-                "reference": "9de133a48ae4ab442d85907ab1c09046dfaa0a71"
+                "reference": "59d6953479b2a8a52ec71e5572c750d46794700b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thtg88/mmcms/zipball/9de133a48ae4ab442d85907ab1c09046dfaa0a71",
-                "reference": "9de133a48ae4ab442d85907ab1c09046dfaa0a71",
+                "url": "https://api.github.com/repos/thtg88/mmcms/zipball/59d6953479b2a8a52ec71e5572c750d46794700b",
+                "reference": "59d6953479b2a8a52ec71e5572c750d46794700b",
                 "shasum": ""
             },
             "require": {
                 "anhskohbo/no-captcha": "^3.0",
                 "doctrine/dbal": "^2.9",
                 "fruitcake/laravel-cors": "^2.0",
-                "illuminate/bus": "^8.0.0",
-                "illuminate/config": "^8.0.0",
-                "illuminate/console": "^8.0.0",
-                "illuminate/container": "^8.0.0",
-                "illuminate/contracts": "^8.0.0",
-                "illuminate/database": "^8.0.0",
-                "illuminate/filesystem": "^8.0.0",
-                "illuminate/mail": "^8.0.0",
-                "illuminate/notifications": "^8.0.0",
-                "illuminate/queue": "^8.0.0",
-                "illuminate/routing": "^8.0.0",
-                "illuminate/support": "^8.0.0",
+                "laravel/framework": "^8.0.0",
                 "laravel/passport": "^10.0",
                 "nesbot/carbon": "^2.0.0",
-                "php": "^7.4.12|^8.0",
-                "thtg88/laravel-exists-without-soft-deleted-rule": "^0.2.0",
+                "php": "^8.0",
+                "thtg88/laravel-db-scaffold-commands": "^0.3.0",
+                "thtg88/laravel-exists-without-soft-deleted-rule": "^0.3",
                 "thtg88/laravel-scaffold-commands": "^0.3.0"
             },
             "require-dev": {
@@ -7141,9 +7196,9 @@
             "description": "A headless CMS. With a REST API.",
             "support": {
                 "issues": "https://github.com/thtg88/mmcms/issues",
-                "source": "https://github.com/thtg88/mmcms/tree/v0.39.2"
+                "source": "https://github.com/thtg88/mmcms/tree/v0.40.0"
             },
-            "time": "2020-11-28T20:52:30+00:00"
+            "time": "2021-03-11T15:05:04+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",

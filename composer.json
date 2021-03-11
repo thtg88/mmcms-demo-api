@@ -19,7 +19,7 @@
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
         "sentry/sentry-laravel": "^2.2",
-        "thtg88/mmcms": "^0.39.0"
+        "thtg88/mmcms": "^0.40"
     },
     "require-dev": {
         "brainmaestro/composer-git-hooks": "^2.8",
